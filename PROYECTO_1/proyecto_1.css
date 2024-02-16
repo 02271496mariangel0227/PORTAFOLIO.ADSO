@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+/* Estilos para la barra superior */
+.top-bar {
+  background-color: #ffffff;
+  width: 100%; /* Ancho del 100% de la ventana del navegador */
+}
+
+/* Estilos para los elementos de la barra */
+.top-bar nav ul {
+  list-style: none;
+  text-align: center;
+  font-weight: 900px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #000000;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 45px;
+}
+
+.top-bar nav h1 {
+  list-style: none;
+  text-align: left;
+  color: red;
+}
+
+.top-bar nav li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.top-bar nav a {
+  text-decoration: none;
+  color: #fdfdfd;
+}
+
+/* contaniner parte 1 */
+.container {
+  display: flex;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  flex-direction: column; /*permite que un div este debajo de otro div*/
+  font-size: 200%; /* Aumenta el tamaño de la fuente al 120% del tamaño base */
+}
+
+#parte_1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(./imagen_principal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /*cada div sea una fila*/
+}
+
+.texto_titulo {
+  text-align: center;
+  padding: 2rem 3rem;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 25px #222;
+  backdrop-filter: blur(80px);
+}
+
+.boton_titulo {
+  padding: 20px;
+  background-color: black;
+  border-radius: 30%;
+  margin-top: 5%;
+}
+
+.boton_titulo:hover {
+  background-color: #e74c3c; /* Cambiar el color de fondo cuando el mouse está sobre el botón */
+}
+
+.parte_2 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img1 {
+  width: 250px;
+  padding: 0 15px;
+  float: left;
+  height: 250px;
+}
+
+
+
+/*----------Sexto contenedor-------------*/
+
+#portafolio {
+  max-width: 1100px;
+  padding: 100px 0;
+  margin: auto;
+}
+
+.misProyectos {
+  text-align: center;
+  font-size: 22px;
+  color: black;
+  text-decoration: underline 5px rgb(44, 133, 175);
+}
+
+#portafolio .misProyectos1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3%;
+  margin: 3%;
+}
+
+#portafolio .proyecto {
+  width: 100%;
+  height: 14vw;
+}
+
+#portafolio .misProyectos1 .proyecto {
+  max-width: 450px;
+  border: 1px solid #000;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* trasicion de gtis a color */
+#portafolio .misProyectos1 .proyecto img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+#portafolio .misProyectos1 .proyecto:hover img {
+  filter: grayscale(0);
+}
+
+/* trasicion de la barra */
+#portafolio .misProyectos1 .proyecto .upInf {
+  position: absolute;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(111, 121, 255);
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  bottom: -40px;
+  transition: 0.5s;
+}
+
+#portafolio .misProyectos1 .proyecto:hover .upInf {
+  opacity: 1;
+  bottom: 0;
+}
+
+/*------------Septimo contenedor-----------*/
+
+

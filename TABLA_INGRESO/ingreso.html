@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadro de Ingreso a Tabla</title>
+    <link rel="stylesheet" href="./ingreso.css">
+    <body>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Ingrese su nombre">
+        
+        <label for="prioridad">Prioridad:</label>
+        <select id="prioridad">
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">Alta</option>
+        </select>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+        
+        
+        <button onclick="agregarFila()">OK</button>
+        <button onclick="ordenar()">ORDENAR</button>
+        
+        <table id="tabla">
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Prioridad</th>
+                
+            </tr>
+        </table>
+        
+        </body>
+
+<script>
+    function agregarFila() {
+        var nombre = document.getElementById("nombre").value;
+        var prioridad = document.getElementById("prioridad").value;
+        var fecha = document.getElementById("fecha").value;
+
+        if (nombre && fecha && prioridad) {
+            var tabla = document.getElementById("tabla");
+            var fila = tabla.insertRow();
+            var celdaNombre = fila.insertCell(0);
+            var celdafecha = fila.insertCell(1);
+            var celdaPrioridad = fila.insertCell(2);
+
+            celdaNombre.innerHTML = nombre;        
+            celdaPrioridad.innerHTML = prioridad;
+            celdafecha.innerHTML = fecha;
+
+            document.getElementById("nombre").value = "";
+            document.getElementById("prioridad").value = "";
+            document.getElementById("fecha").value = "";
+        } else {
+            alert("Por favor, complete todos los campos.");
+        }
+    }
+
+    function ordenar() {
+        var tabla, filas, cambio, i, x, y, deberiaCambiar;
+        tabla = document.getElementById("tabla");
+        cambio = true;
+
+        while (cambio) {
+            cambio = false;
+            filas = tabla.rows;
+
+            for (i = 1; i < filas.length - 1; i++) {
+                deberiaCambiar = false;
+                x = filas[i].getElementsByTagName("TD")[2];
+                y = filas[i + 1].getElementsByTagName("TD")[2];
+
+                // Cambiado para ordenar de alta a baja prioridad
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    deberiaCambiar = true;
+                    break;
+                }
+            }
+
+            if (deberiaCambiar) {
+                filas[i].parentNode.insertBefore(filas[i + 1], filas[i]);
+                cambio = true;
+            }
+        }
+    }
+</script>
+</head>

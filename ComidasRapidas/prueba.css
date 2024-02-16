@@ -1,0 +1,1754 @@
+		 @import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+		 @import url(https://db.onlinewebfonts.com/c/867ec14fb235e53a1026b6e6884e71fa?family=GOOD+BRUSH);
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		/* font-family: 'Montserrat Alternates', sans-serif; */
+		font-family: "GOOD BRUSH";
+	}
+
+	/* ------ FONDO DE LA PAGINA------ */
+
+	body{
+		background: linear-gradient(  rgb(115, 115, 118),rgba(33, 16, 16, 0.8)), url("./fast-food-doodles-hand-drawn-2334538.jpg") ;
+    	width: 100%;
+    	height: 60vh;
+    	background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-size: cover;
+    	background-position: center center;
+    	padding: 100px 0;
+    	text-align: center;
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	.img{
+		background-image: url(./fondo.png);
+		width: 90%;
+		height:80vh;
+		position: relative;
+		top: 5%;
+		left: 5%;
+		right: 5%;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+    	text-align: center;;
+		z-index: 1;
+	}
+
+	/*Estilos para el encabezado*/
+
+	.header{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+		z-index: 5;
+		background-color: #bc8811;
+		border: solid #88630c 5px;
+		border-radius: 25px;
+	}
+	.container{
+		width: 90%;
+		max-width: 1600px;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/* ------Menu lateral------ */
+
+    #btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: fixed;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 5;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 15px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	} 
+	/*Fin de Menu lateral*/
+
+	/* ------SECCION HAMBURGUESAS------ */
+
+	#hamburguesas{
+		position: relative;
+		top: 30%;
+		width: 100%;
+		height: 220vh;
+		/* background-color: rgb(217, 0, 255); */
+		scroll-margin-top: 100px;
+	}
+
+	.platillos{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px; 
+    	text-align: center;
+    	padding-left: 5%;
+    	padding-right: 5%;
+	}
+
+	.tittle1{
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 4em;
+		background-color: #fff;
+		margin-top: 5%;
+	}
+
+	.tittle1 .mis_servicios{
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+      	-webkit-background-clip: text;
+      	color: transparent;
+      	background-clip: text;
+	}
+
+	.card {
+		position: relative;
+		width: 310px;
+		height: 430px;
+		top: 80px;
+		padding-right: 3%;
+		z-index: 1;
+		/* display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px; 
+    	text-align: center;
+    	padding-left: 5%;
+    	padding-right: 5% */
+	}
+
+	.card .card_landing {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger1.jpg);
+		border-radius: 5%;
+	}
+	.card .card_landing_1 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger2.jpg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_2 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger3.jpeg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_3 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger4.jpg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_4 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger5.jpg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_5 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger6.jpg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_6 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger7.jpg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_7 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger8.png);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_8 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger9.jpg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_9 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger10.jpg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_10 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger11.jpg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing_11 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		background-image: url(./burger12.jpg);
+		border-radius: 5%;
+	}
+
+	.card .card_landing h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_1 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #ffffff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_2 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_3 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_4 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_5 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_6 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_7 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+	
+	.card .card_landing_8 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_9 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_10 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_landing_11 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color: #fff;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card .card_info {
+		position: absolute;
+		width: 85%;
+		height: 95%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		margin: auto;
+		padding: 15px;
+		background: #fff;
+		z-index: 90;
+		box-shadow: 0 5px 10px #000;
+		transition: .5s;
+	}
+	
+	.card:hover .card_info {
+		left: 100%;
+	}
+	
+	.card_info .head {
+		padding: 5px 0;
+		border-bottom: solid 1px #bc8811;
+	}
+	
+	.card_info .head .title {
+		font-size: 20px;
+		font-weight: 700;
+		color: #bc8811;
+	}
+	
+	.card_info .content {
+		margin-top: 15px;
+	}
+	
+	.card_info .content .list {
+		padding: 10px 15px;
+	}
+	
+	.card_info .content .list p {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	
+	.card_info .action .btn {
+		padding: 10px;
+		color: #ffffff;
+		width: 80%;
+		border: #ffffff solid 2px;
+		text-decoration: none;
+		text-align: center;
+		background: #bc8811;
+		display: block;
+		margin-top: 10px;
+	
+	}
+
+	.card_info .action{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		
+	}
+
+
+	/* ------ SECCION hot dogs------ */
+
+	#hot_dog{
+		position: relative;
+		top: 30%;
+		width: 100%;
+		height: 120vh;
+		scroll-margin-top: 100px;
+		
+	}
+	
+    .hot_dog1{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px; 
+    	text-align: center;
+    	padding-left: 5%;
+    	padding-right: 5%;
+	}
+	.card1 {
+		position: relative;
+		width: 310px;
+		height: 430px;
+		top: 80px;
+		padding-right: 3%;
+		z-index: 1;
+	}
+
+	.card1 .card_landing_1 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./PERRO-GAMIN\ \(1\).jpg);
+		border-radius: 5%;
+	}
+
+	.card1 .card_landing_2 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./PERRO-EL-ENANO.jpg);
+		border-radius: 5%;
+	}
+
+	.card1 .card_landing_3 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./perro_choncho.jpg);
+		border-radius: 5%;
+	}
+
+	.card1 .card_landing_4 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./PERRO_GAFAS.jpg);
+		border-radius: 5%;
+	}
+
+	.card1 .card_landing_5 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./PERRO-CABEZON.jpg);
+		border-radius: 5%;
+	}
+	
+	.card1 .card_landing_6 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./PERRO-EL-OREJON.jpg);
+		border-radius: 5%;
+	}
+
+	.card1 .card_landing_1 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:black;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+
+	}
+
+	.card1 .card_landing_2 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:black;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+
+	}
+
+	.card1 .card_landing_3 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:black;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+
+	}
+
+	.card1 .card_landing_4 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:black;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+
+	}
+
+	.card1 .card_landing_5 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:black;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+
+	}
+
+	.card1 .card_landing_6 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:black;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+
+	}
+
+	.card1 .card_info {
+		position: absolute;
+		width: 85%;
+		height: 95%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		margin: auto;
+		padding: 15px;
+		background: #fff;
+		z-index: 90;
+		box-shadow: 0 5px 10px #000;
+		transition: .5s;
+	}
+	
+	.card1:hover .card_info {
+		left: 100%;
+	}
+	
+	.card_info .head {
+		padding: 5px 0;
+		border-bottom: solid 1px #bc8811;
+	}
+	
+	.card_info .head .title {
+		font-size: 20px;
+		font-weight: 700;
+		color: #bc8811;
+	}
+	
+	.card_info .content {
+		margin-top: 15px;
+	}
+	
+	.card_info .content .list {
+		padding: 10px 15px;
+	}
+	
+	.card_info .content .list p {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	
+	.card_info .action .btn {
+		padding: 10px;
+		color: #ffffff;
+		width: 80%;
+		border: #ffffff solid 2px;
+		text-decoration: none;
+		text-align: center;
+		background: #bc8811;
+		display: block;
+		margin-top: 10px;
+	}
+
+	.card_info .action{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	/* ------ SECCION para deleitar------ */
+
+	#para_deleitar{
+		position: relative;
+		top: 30%;
+		width: 100%;
+		height: 120vh;
+		/* background-color:aquamarine; */
+		scroll-margin-top: 100px;
+	}
+	
+    .para_deleitar1{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px; 
+    	text-align: center;
+    	padding-left: 5%;
+    	padding-right: 5%;
+	}
+
+	.card2 {
+		position: relative;
+		width: 310px;
+		height: 430px;
+		top: 80px;
+		padding-right: 3%;
+		z-index: 1;
+	}
+
+	.card2 .card_landing_1 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #ffffff;
+		background-image: url(./DELEITAR.jpg);
+		border-radius: 5%;
+	}
+
+	.card2 .card_landing_2 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #ffffff;
+		background-image: url(./comuna.jpg);
+		border-radius: 5%;
+	}
+	
+	.card2 .card_landing_3 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #ffffff;
+		background-image: url(./descarga.jfif);
+		border-radius: 5%;
+	}
+
+	.card2 .card_landing_4 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #ffffff;
+		background-image: url(./CHORICALLEJEROS_b.jpg);
+		border-radius: 5%;
+	}
+
+	.card2 .card_landing_5 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #ffffff;
+		background-image: url(./CALLE_CORN.jpg);
+		border-radius: 5%;
+	}
+
+	.card2 .card_landing_6 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #ffffff;
+		background-image: url(./CALLE-CORN-ENCEBOLLADO.jpg);
+		border-radius: 5%;
+	}
+
+	.card2 .card_landing_1 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card2 .card_landing_2 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card2 .card_landing_3 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card2 .card_landing_4 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card2 .card_landing_5 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card2 .card_landing_6 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+	
+	.card2 .card_info {
+		position: absolute;
+		width: 85%;
+		height: 95%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		margin: auto;
+		padding: 15px;
+		background: #fff;
+		z-index: 90;
+		box-shadow: 0 5px 10px #000;
+		transition: .5s;
+	}
+	
+	.card2:hover .card_info {
+		left: 100%;
+	}
+	
+	.card_info .head {
+		padding: 5px 0;
+		border-bottom: solid 1px #bc8811;
+	}
+	
+	.card_info .head .title {
+		font-size: 20px;
+		font-weight: 700;
+		color: #bc8811;
+	}
+	
+	.card_info .content {
+		margin-top: 15px;
+	}
+	
+	.card_info .content .list {
+		padding: 10px 15px;
+	}
+	
+	.card_info .content .list p {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	
+	.card_info .action .btn {
+		padding: 10px;
+		color: #ffffff;
+		width: 80%;
+		border: #ffffff solid 2px;
+		text-decoration: none;
+		text-align: center;
+		background: #bc8811;
+		display: block;
+		margin-top: 10px;
+	
+	}
+
+	.card_info .action{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		
+	}	
+
+	/* ------paporras------ */
+
+	#paporras{
+		/* background-image: url(./marimondamona.jpg); */
+		background: linear-gradient(  rgb(135, 135, 29),rgba(51, 53, 22, 0.8)), url("./PAPORRAS.jpg") ;
+    	width: 100%;
+    	height: 120vh;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+		scroll-margin-top: 100px;
+	}
+
+	#paporras h3 {
+		text-align: start;
+		color: orange;
+		font-size: 3em;
+	}
+	#paporras p{
+		text-align: start;
+		color: rgb(255, 255, 255);
+		font-size: x-large;
+	}
+	#paporras .precio{
+		text-align:end;
+	}
+	#paporras .menu_paporras div{
+		margin: 5%;
+	}
+
+	/* ------Seccion Sandwich------ */
+
+	#sandwich {
+		/* background-image: url(./marimondamona.jpg); */
+		background: linear-gradient(  rgb(135, 135, 29),rgba(51, 53, 22, 0.8)), url("./sandwiches.jpg") ;
+    	width: 100%;
+    	height: 90vh;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+		scroll-margin-top: 100px;
+	}
+
+	#sandwich h3 {
+		text-align: start;
+		color: orange;
+		font-size: 3em;
+	}
+	#sandwich p{
+		text-align: start;
+		color: rgb(255, 255, 255);
+		font-size: x-large;
+	}
+	#sandwich .precio{
+		text-align:end;
+	}
+	#sandwich .menu_sandwich div{
+		margin: 5%;
+	}
+	
+	/* ------Seccion Chicken wings------ */
+
+	#chicken_wings {
+		/* background-image: url(./marimondamona.jpg); */
+		background: linear-gradient(  rgb(135, 135, 29),rgba(51, 53, 22, 0.8)), url("./alitas.jpeg") ;
+    	width: 100%;
+    	height: 65vh;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+		scroll-margin-top: 100px;
+	}
+
+	#chicken_wings h3 {
+		text-align: start;
+		color: orange;
+		font-size: 3em;
+	}
+	#chicken_wings p{
+		text-align: start;
+		color: rgb(255, 255, 255);
+		font-size: x-large;
+	}
+	#chicken_wings .precio{
+		text-align:end;
+	}
+	#chicken_wings .menu_chicken_wings div{
+		margin: 5%;
+	}
+
+	/* ------ SECCION Parrilla------ */
+
+	#parrilla{
+		position: relative;
+		top: 30%;
+		width: 100%;
+		height: 130vh;
+		/* background-color: aqua; */
+		scroll-margin-top: 100px;
+	}
+	
+	#parrilla .tittle{ 
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #bc8811;
+		font-size: 50px;
+		background-color: #fff;
+	}
+    .parrilla1{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px; 
+    	text-align: center;
+    	padding-left: 5%;
+    	padding-right: 5%;
+	}
+	.card4 {
+		position: relative;
+		width: 310px;
+		height: 430px;
+		top: 80px;
+		padding-right: 3%;
+		z-index: 1;
+	}
+
+	.card4 .card_landing_1 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./PECHUGA_PORTOBELLO.jpg);
+		border-radius: 5%;
+	}
+
+	.card4 .card_landing_2 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./costilla.jpg);
+		border-radius: 5%;
+	}
+
+	.card4 .card_landing_3 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./PECHUGA-MARACANA.jpg);
+		border-radius: 5%;
+	}
+
+	.card4 .card_landing_4 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./RANCHERA.jpg);
+		border-radius: 5%;
+	}
+
+	.card4 .card_landing_5 {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 5px 10px #000;
+		background: linear-gradient(transparent 80%, #000), var(--i);
+		background-position: center;
+		background-size: cover;
+		z-index: 100;
+		color: #000;
+		background-image: url(./CHURRASCO.jpg);
+		border-radius: 5%;
+	}
+	
+	.card4 .card_landing_1 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+	
+	.card4 .card_landing_2 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card4 .card_landing_3 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card4 .card_landing_4 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+
+	.card4 .card_landing_5 h6 {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: xx-large;
+		color:rgb(255, 255, 255);
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+	}
+	.card4 .card_info {
+		position: absolute;
+		width: 85%;
+		height: 95%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		margin: auto;
+		padding: 15px;
+		background: #fff;
+		z-index: 90;
+		box-shadow: 0 5px 10px #000;
+		transition: .5s;
+	}
+	
+	.card4:hover .card_info {
+		left: 100%;
+	}
+	
+	.card_info .head {
+		padding: 5px 0;
+		border-bottom: solid 1px #bc8811;
+	}
+	
+	.card_info .head .title {
+		font-size: 20px;
+		font-weight: 700;
+		color: #bc8811;
+	}
+	
+	.card_info .content {
+		margin-top: 15px;
+	}
+	
+	.card_info .content .list {
+		padding: 10px 15px;
+	}
+	
+	.card_info .content .list p {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	
+	.card_info .action .btn {
+		padding: 10px;
+		color: #ffffff;
+		width: 80%;
+		border: #ffffff solid 2px;
+		text-decoration: none;
+		text-align: center;
+		background: #bc8811;
+		display: block;
+		margin-top: 10px;
+	
+	}
+
+	.card_info .action{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		
+	}
+
+	/* ------Seccion callejeritos------ */
+
+	#callejeritos {
+		/* background-image: url(./marimondamona.jpg); */
+		background: linear-gradient(  rgb(135, 135, 29),rgba(51, 53, 22, 0.8)), url("./marimondamona.jpg") ;
+    	width: 100%;
+    	height: 90vh;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+		scroll-margin-top: 100px;
+	}
+
+	#callejeritos h3 {
+		text-align: start;
+		color: orange;
+		font-size: 3em;
+	}
+	#callejeritos p{
+		text-align: start;
+		color: rgb(255, 255, 255);
+		font-size: x-large;
+	}
+	#callejeritos .precio{
+		text-align:end;
+	}
+	#callejeritos .menu_callejeritos div{
+		margin: 5%;
+	}
+
+	/* ------Seccion callejeritos------ */
+
+	#bebidas {
+		/* background-image: url(./marimondamona.jpg); */
+		background: linear-gradient(  rgb(135, 135, 29),rgba(51, 53, 22, 0.8)), url("./marimondamona.jpg") ;
+    	width: 100%;
+    	height: 325vh;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+		scroll-margin-top: 100px;
+	}
+
+	#bebidas h3 {
+		text-align: start;
+		color: orange;
+		font-size: 3em;
+	}
+	#bebidas p{
+		text-align: start;
+		color: rgb(255, 255, 255);
+		font-size: x-large;
+	}
+	#bebidas .precio{
+		text-align:end;
+	}
+	#bebidas .menu_bebidas div{
+		margin: 5%;
+	}
+
+	#adicionales {
+		/* background-image: url(./marimondamona.jpg); */
+		background: linear-gradient(  rgb(135, 135, 29),rgba(51, 53, 22, 0.8)), url("./marimondamona.jpg") ;
+    	width: 100%;
+    	height: 350vh;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+		scroll-margin-top: 100px;
+	}
+
+	#adicionales h3 {
+		text-align: start;
+		color: orange;
+		font-size: 3em;
+	}
+	#adicionales p{
+		text-align: start;
+		color: rgb(255, 255, 255);
+		font-size: x-large;
+	}
+	#adicionales .precio{
+		text-align:end;
+	}
+	#adicionales .menu_adicionales div{
+		margin: 5%;
+	}
+
+	/* ------Celebraciones------ */
+
+	#celebracion {
+		/* background-image: url(./marimondamona.jpg); */
+		background: linear-gradient(  rgb(135, 135, 29),rgba(51, 53, 22, 0.8)), url("./eventos.jpg") ;
+    	width: 100%;
+    	height: 90vh;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+		scroll-margin-top: 100px;
+	}
+
+	#celebracion h3 {
+		text-align: start;
+		color: orange;
+		font-size: 3em;
+	}
+	#celebracion .celebraciones1 div{
+		margin: 5%;
+	}
+
+	#final {
+		background-color: #000;
+		color: #fff;
+		text-align: center;
+		padding: 25px 0;
+		font-size: 3em;
+		background-image: linear-gradient(to bottom, #fbff00, #ff0000);
+      	-webkit-background-clip: text;
+      	color: transparent;
+      	background-clip: text;
+	}
+
+	
+	#final a {
+		text-decoration: none;
+		color: #fff;
+		display: inline-block;
+		margin: 4px;
+		font-size: 20px;
+		width: 20px;
+		height: 20px;
+	}
+
+	#final .redes a:hover {
+		color: rgb(44, 53, 175);
+		width: 20px;
+		height: 20px;
+	}
+
+	#final .redes .uno:hover {
+		color: rgb(255, 0, 0);
+		width: 20px;
+		height: 20px;
+	}
+
+	#final .redes .dos:hover {
+		color: rgb(255, 98, 247);
+		width: 20px;
+		height: 20px;
+	}
+
+
+
+	@media screen and (max-width: 700px) {
+
+		/* ------header------ */
+
+		.container .logo h1{
+			font-size: larger;
+		}
+
+		.container .menu{
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			font-size: large;
+		}
+
+		.container .menu a{
+			display: inline-block;
+			padding: 10px;
+			line-height: normal;
+			text-decoration: none;
+			color: #ffffff;
+			transition: all 0.3s ease;
+			border-bottom: 2px solid transparent;
+			font-size: 15px;
+			margin-right: 5px;
+		}
+
+		/* ------HAMBURGUESAS------ */
+
+		#hamburguesas{
+			position: relative;
+			top: 30%;
+			width: 100%;
+			height: 620vh;
+			scroll-margin-top: 100px;
+		}
+
+		.platillos{
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px; 
+			text-align: center;
+			padding-left: 5%;
+			padding-right: 5%;
+			margin-top: 5%;
+		}
+
+		/* ------HOT DOG------ */
+
+		#hot_dog{
+			position: relative;
+			top: 30%;
+			width: 100%;
+			height: 320vh;
+			scroll-margin-top: 100px;
+			
+		}
+		
+		.hot_dog1{
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px; 
+			text-align: center;
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+	
+		
+	}
+	@media screen and (min-width: 701px) and (max-width: 1299px) {
+		.tittle1{
+			position: relative;
+			top: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #bc8811;
+			font-size: 50px;
+			background-color: #fff;
+		}
+		.platillos{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px; 
+			text-align: center;
+			padding-left: 5%;
+			padding-right: 5%;
+			margin-top: 5%;
+		}
+	
+		.card {
+			position: relative;
+			width: 310px;
+			height: 430px;
+			top: 80px;
+			padding-right: 3%;
+			z-index: 1;
+			/* display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px; 
+			text-align: center;
+			padding-left: 5%;
+			padding-right: 5% */
+		}
+	
+		.card .card_landing {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 5px 10px #000;
+			background: linear-gradient(transparent 80%, #000), var(--i);
+			background-position: center;
+			background-size: cover;
+			z-index: 100;
+			background-image: url(./Hamburguesa-americana-1-scaled.jpg);
+		}
+		
+		.card .card_landing h6 {
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			font-size: 25px;
+			color: #fff;
+		}
+		
+		.card .card_info {
+			position: absolute;
+			width: 85%;
+			height: 95%;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			top: 0;
+			margin: auto;
+			padding: 15px;
+			background: #fff;
+			z-index: 90;
+			box-shadow: 0 5px 10px #000;
+			transition: .5s;
+		}
+		
+		.card:hover .card_info {
+			left: 100%;
+		}
+		
+		.card_info .head {
+			padding: 5px 0;
+			border-bottom: solid 1px #bc8811;
+		}
+		
+		.card_info .head .title {
+			font-size: 20px;
+			font-weight: 700;
+			color: #bc8811;
+		}
+		
+		.card_info .content {
+			margin-top: 15px;
+		}
+		
+		.card_info .content .list {
+			padding: 10px 15px;
+		}
+		
+		.card_info .content .list p {
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+		
+		.card_info .action .btn {
+			padding: 10px;
+			color: #ffffff;
+			width: 80%;
+			border: #ffffff solid 2px;
+			text-decoration: none;
+			text-align: center;
+			background: #bc8811;
+			display: block;
+			margin-top: 10px;
+		
+		}
+	
+		.card_info .action{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			
+		}
+	}

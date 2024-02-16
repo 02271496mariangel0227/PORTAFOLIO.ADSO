@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./calculadora.css">
+    <link rel="stylesheet" href="./calculadora.js">
+  
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="keys">
+            <button onclick="limpiar()">C</button>
+            <button onclick="agregarCaracter('/')">/</button>
+            <button onclick="agregarCaracter('*')">*</button>
+            <button onclick="agregarCaracter('')"></button>
+            <button onclick="agregarCaracter('7')">7</button>
+            <button onclick="agregarCaracter('8')">8</button>
+            <button onclick="agregarCaracter('9')">9</button>
+            <button onclick="agregarCaracter('.')">%</button>
+            <button onclick="agregarCaracter('4')">4</button>
+            <button onclick="agregarCaracter('5')">5</button>
+            <button onclick="agregarCaracter('6')">6</button>
+            <button onclick="agregarCaracter('-')">-</button>
+            <button onclick="agregarCaracter('3')">3</button>
+            <button onclick="agregarCaracter('2')">2</button>
+            <button onclick="agregarCaracter('1')">1</button>
+            <button onclick="agregarCaracter('+')">+</button>
+            <button onclick="calcular()">=</button>     
+            <button onclick="agregarCaracter('0')">0</button>
+            <button onclick="agregarCaracter('.')">.</button>
+            <button onclick="calcular()">=</button>
+
+            
+
+
+        </div>
+    </div>
+    <script>
+        let display = document.getElementById("display");
+let equation = "";
+
+function agregarCaracter(caracter) {
+    equation += caracter;
+    display.value = equation;
+}
+
+function limpiar() {
+    equation = "";
+    display.value = "";
+}
+
+function calcular() {
+    try {
+        let result = eval(equation);
+        display.value = result;
+        equation = result.toString();
+    } catch (error) {
+        display.value = "Error";
+        equation = "";
+    }
+}
+
+    </script>
+
+
+</body>
+</html>

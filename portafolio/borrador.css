@@ -1,0 +1,118 @@
+/* Restablecer estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Cabecera */
+  header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  header nav {
+    float: right;
+  }
+  
+  header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  header nav a:hover {
+    color: #ccc;
+  }
+  
+  /* Sección principal */
+  main {
+    padding: 20px;
+  }
+  
+  /* Sección "Sobre mí" */
+  #sobre-mi {
+    margin-bottom: 20px;
+  }
+  
+  #sobre-mi h2 {
+    margin-bottom: 10px;
+  }
+  
+  #sobre-mi p {
+    font-size: 18px;
+  }
+  
+  /* Sección "Portafolio" */
+  #portafolio {
+    margin-bottom: 20px;
+  }
+  
+  #portafolio h2 {
+    margin-bottom: 10px;
+  }
+  
+  .proyectos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .proyectos a {
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .proyectos a:hover {
+    color: #000;
+  }
+  
+  .proyectos img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .proyectos h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  /* Sección "Contacto" */
+  #contacto {
+    margin-bottom: 20px;
+  }
+  
+  #contacto h2 {
+    margin-bottom: 10px;
+  }
+  
+  #contacto p {
+    font-size: 18px;
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }

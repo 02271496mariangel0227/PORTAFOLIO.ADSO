@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Roboto', sans-serif; */
+  
+   
+      font-family: "Sixtyfour", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings:
+        "BLED" 0,
+        "SCAN" 0;
+    
+}
+
+/*------------primera contenedor---------*/
+.header1{
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.header {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 15px;
+}
+.header h1 {
+    text-align: center;
+    color: rgb(108, 115, 216);
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 12px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.header nav ul li a:hover {
+    color: rgb(108, 115, 216);
+}
+
+.header .redes a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+    transition: .5s;
+}
+
+.header .redes a:hover {
+    color: rgb(44, 53, 175);
+}
+
+.header .redes a:hover {
+    color: rgb(44, 53, 175);
+    width: 20px;
+    height: 20px;
+}
+
+.header .redes .uno:hover {
+    color: rgb(255, 0, 0);
+    width: 20px;
+    height: 20px;
+}
+
+.header .redes .dos:hover {
+    color: rgb(255, 98, 247);
+    width: 20px;
+    height: 20px;
+}
+
+/*-----------------segundo_contenedor--------------*/
+.foto_p{
+    width: 30%;
+}
+#foto_p1{
+    width: 250px;
+    height: 350px;
+    position: relative;
+    margin: 25%;
+    border: solid rgb(210, 210, 210) 10px;
+    border-radius: 5px;
+}
+
+#inicio{
+    background-image: url(./INICIO.jpg);
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(50, 50, 50);
+    background-blend-mode: soft-light;
+    color: white;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    z-index: 9;
+}
+.texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#welcome{
+    font-size: 30px;
+
+}
+.nombre{
+    display: flex;
+    margin-top: 3%;
+    margin-bottom: 8%;
+}
+.h1{
+    margin-right: 20px;
+    text-align: left;
+    font-size: 50px;
+}
+.h2{
+    font-size: 40px;
+    text-align: center;
+    text-align: left;
+
+    color: rgb(253, 253, 253);
+}
+.boton{
+    border-radius: 50px;
+    padding: 15px 50px;         
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
+}
+
+/*----------tercer contenedor-------------*/
+
+#portafolio {
+    width: 100%;
+}
+
+#portafolio .misProyectos {
+    text-align: center;
+    font-size: 22px;
+    color:black;
+    text-decoration: underline 5px rgb(158, 47, 222);
+}
+
+#portafolio .misProyectos1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
+    margin: 3%;
+}
+#portafolio .proyecto{
+    width: 100%;
+    height: 14vw;
+    border-radius: 20PX;
+}
+
+#portafolio .misProyectos1 .proyecto {
+    max-width: 450px;
+    border: 7px solid #d3d2d2;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#portafolio .misProyectos1 .proyecto img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    object-fit: cover;
+    transition: .5s;
+}
+
+#portafolio .misProyectos1 .proyecto:hover img {
+    filter: grayscale(0);
+}
+
+#portafolio .misProyectos1 .proyecto .upInf {
+    position: absolute;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(214, 214, 214);
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    bottom: -40px;
+    transition: .5s;
+}
+
+#portafolio .misProyectos1 .proyecto:hover .upInf {
+    opacity: 1;
+    bottom: 0;
+}
+
+/*------------CUARTA contenedor-----------*/
+
+#contacto {
+    padding: 10px 15px;
+    background-color: rgb(216, 216, 216);
+}
+
+.titulo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline 3px rgb(44, 53, 175);
+    font-size: 25px;
+}
+
+.Formulario {
+    max-width: 1100px;
+    margin: auto;
+}
+.part1 {
+    display: flex;
+    justify-content: space-between;   
+    padding-bottom: 3%;
+}
+
+.partA {
+    width: 100%;
+    margin-right:3%;
+}
+.partB {
+    width: 100%;
+}
+
+.part2 {
+    padding-bottom: 3%;
+    width: 100%;
+}
+
+#contacto .Formulario input,
+#contacto .Formulario textarea {
+    border-radius: 20px;
+    border: none;
+    border: 1px solid #919191;
+}
+
+.input-full {
+    width: 96%;
+}
+
+#contacto .btn-enviar {
+    display: block;
+    margin: 30px auto;
+    transition: .2s;
+    padding: 11px 16px ;
+}
+
+#final {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+}
+
+#final a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 4px;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+#final .redes a:hover {
+    color: rgb(44, 53, 175);
+    width: 20px;
+    height: 20px;
+}
+
+#final .redes .uno:hover {
+    color: rgb(255, 0, 0);
+    width: 20px;
+    height: 20px;
+}
+
+#final .redes .dos:hover {
+    color: rgb(255, 98, 247);
+    width: 20px;
+    height: 20px;
+}
+@media screen and (max-width: 600px) {
+
+    /* ------Primera parte------- */
+    .header {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px 10px;
+    }
+    .header h1 {
+        text-align: center;
+        color: rgb(44, 53, 175);
+        font-size: x-large;
+    }
+    #links{
+        display: flex;
+        flex-direction: column;
+    }
+    .header nav ul li {
+        text-decoration: none;
+        color: #fff;
+        margin-top: 5px;
+        font-weight: 400;
+        transition: .5s;
+    }
+    .header .redes {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        margin-top: 8px;
+        transition: .5s;
+
+    }
+
+    /* -----segunda parte----- */
+
+    #inicio{
+        background-image: url(./pngtree-matrix-code-abstract-programming-background-image_908363.png);
+        padding-top: 9em;
+        padding-left: 3.5em;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(50, 50, 50);
+        background-blend-mode: soft-light;
+        color: white;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        z-index: 9;
+    }
+
+    .texto{
+        position: absolute;
+        padding-top: 7em;    
+        /* padding-right: 1em; */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+    }
+
+    .h2{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 3%;
+        margin-right: 10px;
+        color: rgb(121, 130, 255);
+    }
+
+    .nombre{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;
+        margin-bottom: 8%;
+        transition: 1s;
+    }
+
+    .boton{
+        border-radius: 50px;
+        padding: 5px 18px;
+        border: 2px solid white;
+        text-decoration: none;
+        color: white;
+    }
+
+    /* ---------------------- */
+    
+    /* .foto_p{
+        width: 30%;
+    }
+    #foto_p1{
+        width: 250px;
+        height: 350px;
+        position: relative;
+        margin: 25%;
+        border: solid rgb(210, 210, 210) 10px;
+        border-radius: 5px;
+    }
+    
+    #inicio{
+        background-image: url(./Captura\ de\ pantalla\ 2024-02-02\ 192923.png);
+        width: 100%;
+        height: 60vh;
+        background-color: rgb(50, 50, 50);
+        background-blend-mode: soft-light;
+        color: white;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        z-index: 9;
+    }
+    .texto{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #welcome{
+        font-size: 30px;
+    }
+    .nombre{
+        display: flex;
+        margin-top: 3%;
+        margin-bottom: 8%;
+    }
+    .h1{
+        margin-right: 10px;
+        font-size: 40px;
+    }
+    .h2{
+        font-size: 40px;
+        text-align: end;
+        color: rgb(121, 130, 255);
+    }
+    .boton{
+        border-radius: 50px;
+        padding: 15px 50px;         
+        border: 2px solid white;
+        text-decoration: none;
+        color: white;
+    } */
+
+
+    /* ------cuarta parte------ */
+
+    #servicios{
+        background-color:rgb(210, 210, 210) ;
+        width: 100%;
+        height: 290vh;
+        padding-bottom: 5%;
+        transition: .5s;
+    }
+
+    .mis_servicios{
+        display: flex;
+        justify-content: start;
+        margin-top: 10%;
+        margin-bottom: 20px;
+        text-decoration: underline solid 3px gray;
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px; 
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;    
+        transition: .5s;
+        }
+
+     .card1{
+        font-size: small;
+        background-color: white;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 80%;
+        height: 42vh;
+        }
+
+    /* -------Sexto contenedor------ */
+
+    #portafolio .misProyectos1 .proyecto .upInf {
+        position: absolute;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: rgb(111, 121, 255);
+        width: 100%;
+        padding: 0;
+        opacity: 0;
+        bottom: -40px;
+        transition: .5s;
+    }
+}
